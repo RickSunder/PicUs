@@ -9,9 +9,7 @@ from helpers import *
 
 # configure application
 app = Flask(__name__)
-@app.route("/")
-def index():
-    return render_template("index.html")
+
 # ensure responses aren't cached
 if app.config["DEBUG"]:
     @app.after_request
