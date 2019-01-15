@@ -9,7 +9,9 @@ from helpers import *
 
 # configure application
 app = Flask(__name__)
-
+@app.route("/")
+def index():
+    return render_template("index.html")
 # ensure responses aren't cached
 if app.config["DEBUG"]:
     @app.after_request
@@ -28,8 +30,14 @@ Session(app)
 # configure CS50 Library to use SQLite database
 db = SQL("sqlite:///PicUs.db")
 
-@app.route("/make_group", methods=["GET", "POST"])
+@app.route("/")
 @login_required
+def homepage():
+    """The homepage of the website"""
+    if request.method == "POST":
+        return "hoi"
+    else:
+        return render_template("homepage.html")
 def make_group():
     """Make new group"""
     if request.method == "POST":
@@ -37,6 +45,3 @@ def make_group():
     else:
         return "joe"
 
-@app.route("/")
-def index():
-    return render_template("index.html")
