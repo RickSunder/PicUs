@@ -36,3 +36,7 @@ def make_group():
         return "bla"
     else:
         return "joe"
+
+@app.route("/")
+def index():
+    return render_template("index.html")
