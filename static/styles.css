@@ -1,0 +1,102 @@
+@import url('https://fonts.google.com/specimen/Rubik+Mono+One?selection.family=Rubik+Mono+One');
+
+
+body, html {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat';
+    background: url(/pictures/background.png) no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    }
+
+.dropdown:hover> .dropdown-menu {
+    display: block;
+    }
+
+.logo {
+    height: 45px;
+    width: 80px;
+    }
+
+.navbarSupportedContent {
+    color: red;
+    }
+
+.partofgroup {
+    /* Be part of your own group now! */
+position: absolute;
+width: 1073px;
+height: 309px;
+left: 80px;
+top: 376px;
+
+font-family: 'Rubik Mono One';
+font-style: normal;
+font-weight: normal;
+line-height: 750px;
+font-size: 73px;
+
+color: #FFFFFF;
+
+
+    }
+
+.laptop {
+    /* Component */
+
+position: absolute;
+width: 50%;
+height: 50%;
+left: 1300px;
+top: 250px;
+
+}
+
+
+@font-face { font-family: Rubik Mono One; src: url('/pictures/RubikMonoOne-Regular.ttf'); }
+h1 {
+ font-family: Rubik Mono One
+}
+
+.btn-outline-success {
+    color: #ffffff;
+    border-color: #fff;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #ed3af9;
+    border-color: #ed3af9;
+}
+
+.btn-outline-success:click {
+    color: #fff;
+    background-color: #ed3af9;
+    border-color: #ed3af9;
+}
+
+.btn-outline-secondary {
+    color: #f8f9fa;
+    background-color: black;
+    border-color: black;
+    position: absolute;
+    left: 80px;
+    top: 550px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.btn-outline-secondary:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+
+}
