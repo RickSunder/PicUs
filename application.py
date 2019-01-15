@@ -42,3 +42,11 @@ def make_group():
     else:
         return "joe"
 
+def eventview():
+    if request.method == "POST":
+        return "hoi"
+    else:
+        return render_template("eventview.html")
+
+
+
