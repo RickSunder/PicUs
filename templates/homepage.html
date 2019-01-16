@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/static/styles.css">
+<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
 <link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik+Mono+One?selection.family=Rubik+Mono+One" />
 
 
@@ -25,7 +26,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: FC5BFF;">
-  <a class="navbar-brand" href="/homepage.html"><img class="logo" src="/PicUs/logo.png" alt="logo"></a>
+  <a class="navbar-brand" href="{{ url_for('homepage') }}"><img class="logo" src="/PicUs/logo.png" alt="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,18 +38,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ url_for('homepage') }}">Home <span class="sr-only">(current)</span></a>
       </li>
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" style ="color: white" aria-expanded="false">
                                       Events
                                     </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                          <a class="dropdown-item" href="/eventview.html">Make event</a>
+                                          <a class="dropdown-item" href="{{ url_for('eventview') }}">view event</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" href="#">Event timeline</a>
+                                          <a class="dropdown-item" href="{{ url_for('myevents') }}">My events</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" href="#">Bewaar deze even</a>
+                                          <a class="dropdown-item" href="{{ url_for('makeevent') }}">Make Event</a>
                                         </div>
                                     </li>
 
